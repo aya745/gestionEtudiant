@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Étudiants</title>
+</head>
+<body>
+    <h1>Étudiants</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>CIN</th>
+                <th>Niveau</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="etudiant : ${etudiants}">
+                <td th:text="${etudiant.id}"></td>
+                <td th:text="${etudiant.name}"></td>
+                <td th:text="${etudiant.CIN}"></td>
+                <td th:text="${etudiant.level}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
